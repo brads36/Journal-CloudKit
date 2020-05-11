@@ -39,6 +39,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="e5m-vW-k5w" kind="show" identifier="toEditEntry" id="qFZ-ut-6It"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -47,11 +50,12 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="sz0-2q-wYl">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Yot-Oj-AU8"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Yot-Oj-AU8">
+                            <connections>
+                                <segue destination="e5m-vW-k5w" kind="show" identifier="toAddEntry" id="8GN-L1-2qV"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
-                    <connections>
-                        <segue destination="e5m-vW-k5w" kind="show" id="Bj5-pj-tdK"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6T6-al-vQf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -82,6 +86,9 @@
                                 <state key="normal" title="Clear">
                                     <color key="titleColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="clearButtonTapped:" destination="e5m-vW-k5w" eventType="touchUpInside" id="mep-h8-OPr"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Title Here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dMC-EQ-hWF">
                                 <rect key="frame" x="8" y="108" width="398" height="34"/>
@@ -90,6 +97,7 @@
                             </textField>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="dMC-EQ-hWF" firstAttribute="leading" secondItem="hFR-NS-Kp6" secondAttribute="leading" constant="8" id="0VV-sW-s2o"/>
                             <constraint firstItem="rjB-Pt-KJx" firstAttribute="leading" secondItem="hFR-NS-Kp6" secondAttribute="leading" constant="8" id="3a3-zZ-GXi"/>
@@ -103,12 +111,28 @@
                             <constraint firstItem="hFR-NS-Kp6" firstAttribute="trailing" secondItem="dMC-EQ-hWF" secondAttribute="trailing" constant="8" id="uUK-YF-Xsd"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hFR-NS-Kp6"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="vfP-GV-MEz" appends="YES" id="uyv-Mb-8Eq"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="pSm-Fd-TW6">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="xsg-gA-hWM"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="xsg-gA-hWM">
+                            <connections>
+                                <action selector="saveButtonTapped:" destination="e5m-vW-k5w" id="AlD-xb-rXX"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="bodyTextView" destination="rjB-Pt-KJx" id="siE-D3-6UG"/>
+                        <outlet property="titleTextField" destination="dMC-EQ-hWF" id="wUp-TR-HFz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NJq-wH-SQu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="vfP-GV-MEz">
+                    <connections>
+                        <action selector="mainViewTapped:" destination="e5m-vW-k5w" id="eKW-5Y-nJg"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1586" y="139"/>
         </scene>
@@ -131,4 +155,7 @@
             <point key="canvasLocation" x="137.68115942028987" y="138.61607142857142"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="qFZ-ut-6It"/>
+    </inferredMetricsTieBreakers>
 </document>

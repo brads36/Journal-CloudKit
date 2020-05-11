@@ -21,7 +21,7 @@ class EntryController {
     let privateDB = CKContainer.default().privateCloudDatabase
     
     // MARK: - CRUD
-    func createEntryWith(with title: String, body: String, completion: @escaping (_ result: Result<Entry?, EntryError>) -> Void) {
+    func createEntryWith(title: String, body: String, completion: @escaping (_ result: Result<Entry?, EntryError>) -> Void) {
         
         let newEntry = Entry(title: title, body: body)
         saveEntry(entry: newEntry, completion: completion)

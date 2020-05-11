@@ -11,6 +11,9 @@ import UIKit
 class EntryListTableViewController: UITableViewController {
 
     // MARK: - LifeCycle
+    override func viewWillAppear(_ animated: Bool) {
+        updateViews()
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         EntryController.sharedInstance.fetchEntriesWith { (result) in
@@ -43,9 +46,16 @@ class EntryListTableViewController: UITableViewController {
     
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toEditEntry" {
+        guard let indexPath = tableView.indexPathForSelectedRow,
+            let destinationVC = segue.destination as? EntryDetailViewController else { return }
+            let entryToSend = EntryController.sharedInstance.entries[indexPath.row]
+            destinationVC.entry = entryToSend
+            }
         
-        
+        if segue.identifier == "toAddEntry" {
+        guard let indexPath = tableView.indexPathForSelectedRow,
+            let destinationVC = segue.destination as? EntryDetailViewController else { return }
+        }
     }
-    
-
 }

@@ -106,7 +106,6 @@
 			isa = PBXGroup;
 			children = (
 				85858B82242D081200C5ECA2 /* CloudKitJournal */,
-				85858B9D242D0A8B00C5ECA2 /* CloudKitJournal.entitlements */,
 				85858B81242D081200C5ECA2 /* Products */,
 				85858B9E242D0A9200C5ECA2 /* Frameworks */,
 			);
@@ -135,6 +134,7 @@
 		85858B97242D082D00C5ECA2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				85858B9D242D0A8B00C5ECA2 /* CloudKitJournal.entitlements */,
 				85858B83242D081200C5ECA2 /* AppDelegate.swift */,
 				85858B85242D081200C5ECA2 /* SceneDelegate.swift */,
 				85858B8C242D081400C5ECA2 /* Assets.xcassets */,
@@ -374,7 +374,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = CloudKitJournal/CloudKitJournal.entitlements;
+				CODE_SIGN_ENTITLEMENTS = CloudKitJournal/Resources/CloudKitJournal.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6FR69MK7S5;
 				INFOPLIST_FILE = "$(SRCROOT)/CloudKitJournal/Resources/Info.plist";
@@ -393,7 +393,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = CloudKitJournal/CloudKitJournal.entitlements;
+				CODE_SIGN_ENTITLEMENTS = CloudKitJournal/Resources/CloudKitJournal.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6FR69MK7S5;
 				INFOPLIST_FILE = "$(SRCROOT)/CloudKitJournal/Resources/Info.plist";
