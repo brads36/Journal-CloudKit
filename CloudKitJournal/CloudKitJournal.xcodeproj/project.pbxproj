@@ -10,6 +10,9 @@
 		78F0AC4A2469F00700E66D16 /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F0AC492469F00700E66D16 /* Entry.swift */; };
 		78F0AC4C2469FE1800E66D16 /* EntryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F0AC4B2469FE1800E66D16 /* EntryController.swift */; };
 		78F0AC4F246A020700E66D16 /* EntryError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F0AC4E246A020700E66D16 /* EntryError.swift */; };
+		78F0AC51246A0D0400E66D16 /* EntryListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F0AC50246A0D0400E66D16 /* EntryListTableViewController.swift */; };
+		78F0AC53246A105C00E66D16 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F0AC52246A105C00E66D16 /* DateExtension.swift */; };
+		78F0AC55246A11CD00E66D16 /* EntryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F0AC54246A11CD00E66D16 /* EntryDetailViewController.swift */; };
 		85858B84242D081200C5ECA2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85858B83242D081200C5ECA2 /* AppDelegate.swift */; };
 		85858B86242D081200C5ECA2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85858B85242D081200C5ECA2 /* SceneDelegate.swift */; };
 		85858B8B242D081200C5ECA2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85858B89242D081200C5ECA2 /* Main.storyboard */; };
@@ -22,6 +25,9 @@
 		78F0AC492469F00700E66D16 /* Entry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
 		78F0AC4B2469FE1800E66D16 /* EntryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryController.swift; sourceTree = "<group>"; };
 		78F0AC4E246A020700E66D16 /* EntryError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryError.swift; sourceTree = "<group>"; };
+		78F0AC50246A0D0400E66D16 /* EntryListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryListTableViewController.swift; sourceTree = "<group>"; };
+		78F0AC52246A105C00E66D16 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		78F0AC54246A11CD00E66D16 /* EntryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryDetailViewController.swift; sourceTree = "<group>"; };
 		85858B80242D081200C5ECA2 /* CloudKitJournal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CloudKitJournal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85858B83242D081200C5ECA2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		85858B85242D081200C5ECA2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,16 +71,18 @@
 			isa = PBXGroup;
 			children = (
 				78F0AC482469EFD000E66D16 /* Model Contoller */,
-				78F0AC472469EFC900E66D16 /* View Controller */,
+				78F0AC472469EFC900E66D16 /* View Controllers */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
 		};
-		78F0AC472469EFC900E66D16 /* View Controller */ = {
+		78F0AC472469EFC900E66D16 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				78F0AC50246A0D0400E66D16 /* EntryListTableViewController.swift */,
+				78F0AC54246A11CD00E66D16 /* EntryDetailViewController.swift */,
 			);
-			path = "View Controller";
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 		78F0AC482469EFD000E66D16 /* Model Contoller */ = {
@@ -89,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				78F0AC4E246A020700E66D16 /* EntryError.swift */,
+				78F0AC52246A105C00E66D16 /* DateExtension.swift */,
 			);
 			path = "Helpers + Extentions";
 			sourceTree = "<group>";
@@ -216,8 +225,11 @@
 			files = (
 				78F0AC4A2469F00700E66D16 /* Entry.swift in Sources */,
 				78F0AC4F246A020700E66D16 /* EntryError.swift in Sources */,
+				78F0AC51246A0D0400E66D16 /* EntryListTableViewController.swift in Sources */,
+				78F0AC53246A105C00E66D16 /* DateExtension.swift in Sources */,
 				85858B84242D081200C5ECA2 /* AppDelegate.swift in Sources */,
 				78F0AC4C2469FE1800E66D16 /* EntryController.swift in Sources */,
+				78F0AC55246A11CD00E66D16 /* EntryDetailViewController.swift in Sources */,
 				85858B86242D081200C5ECA2 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
